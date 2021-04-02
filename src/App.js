@@ -1,31 +1,20 @@
 
 import './App.css';
 import React from 'react';
-
-
-import RecPage from "./pages/RecPage.js";
+//Pages:
+import RecPage from "./pages/RecPage.js"; // Recommender Page
+import InputPage from "./pages/InputPage.js"; //Input Page
 class App extends React.Component{
   constructor(props){
     super(props);
   }
   render(){
     return(
-      <div className="opening-page" style={{ alignItems:'center',justifyItems:'center', flex:1, flexDirection:'row'}}> {/** This is the background */}
-          
-            <div className="input-box">
-              <h1>By The Cover</h1>
-              <h3>Enter a comma dillineated list of movies that you would be in the mood to watch tonight!</h3>
-              <label style={{fontSize:32}}>
-                  Movies: 
-                  <input style={{width: 400, height:25}} type="text" name="movies"/>
-              </label>
-              <div style={{marginTop:30}}>
-                <input style={{height:35, fontSize:20, borderRadius:5, backgroundColor:'purple'}} type="submit" name="submit"/>
-              </div>
-              
-            </div>
-          
+      <div>
+        <RecPage/>
+        
       </div>
+      
 
     )
   }

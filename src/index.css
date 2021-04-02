@@ -73,15 +73,7 @@ code {
   left: 0;
   min-width: 100%;
   min-height: 100%;
-  background-image: repeating-radial-gradient(
-    purple,
-    navy,
-    purple,
-    purple,
-    navy,
-    navy,
-    black
-  );
+  background-image: linear-gradient(midnightblue, purple, midnightblue);
 }
 
 .input-box {
