@@ -9,12 +9,14 @@ class Carousel extends React.Component{
     };
     makeItems = (movies) =>{
         return movies.map((movie) =>{
+
             return(
                 <Card 
+                    id={movie.id}
                     title={movie.title}
                     genre={movie.genre}
                     year={movie.year}
-                    image={movie.image_path}
+                    image={"https://image.tmdb.org/t/p/original/"}
                 />
             )
         })
