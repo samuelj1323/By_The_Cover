@@ -2,7 +2,7 @@ import { render } from "@testing-library/react";
 import React from "react";
 
 function Card(props){
-   // const card_img = fetch("https://api.themoviedb.org/3/movie/"+this.props.id+"?api_key=5068de400d8add1ad16e46caceba6ff7&language=en-US")["poster_path"]
+   // const card_img = fetch("https://api.themoviedb.org/3/movie/"+this.props.id+"?api_key=KEY_here&language=en-US")["poster_path"]
     return(
         <div 
          style={
