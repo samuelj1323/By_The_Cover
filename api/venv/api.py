@@ -3,6 +3,12 @@ from flask import Flask
 
 app = Flask(__name__)
 
+@app.route("/api/endpoint")
+def endpoint():
+    resp = make_response({"cat": 15})
+    resp.headers["Access-Control-Allow-Origin"] = "*"
+    return resp
+
 @app.route('/')
 def give_array_of_data():
     return str([1,2,3,4,5])

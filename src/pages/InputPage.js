@@ -81,7 +81,7 @@ class InputPage extends React.Component{
     handleClick(){ // here is where we will call the API
         //alert("movies we are searching: " + this.state.movies)
         this.setState({show_rec:'loading'})
-        fetch("/search_movie/guardians_of_the_galaxy").then(data =>{
+        fetch("https://by-the-cover.herokuapp.com/api/endpoint").then(data =>{
             console.log(data)
             //this.setState({rec_movies:data})
         })
