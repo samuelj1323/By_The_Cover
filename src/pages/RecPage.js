@@ -1,11 +1,11 @@
 import React from "react";
 import Carousel from "../components/Carousel"
-import Button from 'react-bootstrap/Button'
-import {Link} from 'react-router-dom'
+//import Button from 'react-bootstrap/Button'
+//import {Link} from 'react-router-dom'
 //images:
-import rev from "../assets/revenant.png"
-import sw from "../assets/Star-Wars-Movie-Poster.jpeg"
-import b2f from "../assets/b2f.jpeg"
+//import rev from "../assets/revenant.png"
+//import sw from "../assets/Star-Wars-Movie-Poster.jpeg"
+//import b2f from "../assets/b2f.jpeg"
 import FN from "../assets/FN.jpg"
 class RecPage extends React.Component{
     constructor(props){ // contstructs our information 
@@ -30,17 +30,16 @@ class RecPage extends React.Component{
                 
                 
                 <h2 style={{color:"white"}}>Most Similar to the Poster art...</h2>
-                <Carousel movies={this.props.movies}/>
+                <Carousel movies={this.props.movies1}/>
+                <h2 style={{color:"white"}}>Least Similar to the Poster art...</h2>
+                <Carousel movies={this.props.movies2}/>
                 <h2 style={{color:"white"}}>Most Similar to the Musical Score...</h2>
-                <Carousel movies={this.props.movies}/>
-                <h2 style={{color:"white"}}>Most Similar to the Musical Score...</h2>
-                <Carousel movies={this.props.movies}/>
-                <h2 style={{color:"white"}}>Most Similar to both Poster Art and Musical Score...</h2>
-                <Carousel movies={this.props.movies}/>
-                <h2 style={{color:"white"}}>Least Similar to Poster art...</h2>
-                <Carousel movies={this.props.movies}/>
-                <h2 style={{color:"white"}}>Least Similar to Musical Score...</h2>
-                <Carousel movies={this.props.movies}/>
+                <Carousel movies={this.props.movies3}/>
+                <h2 style={{color:"white"}}>Least Similar to the Musical Score...</h2>
+                <Carousel movies={this.props.movies4}/>
+                <h2 style={{color:"white"}}>Most Similar with Sound and then Poster art...</h2>
+                <Carousel movies={this.props.movies5}/>
+                
                 
             </div>
         );

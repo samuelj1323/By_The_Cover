@@ -1,8 +1,8 @@
-import { render } from "@testing-library/react";
+//import { render } from "@testing-library/react";
 import React from "react";
-
+//import {img} from 'react';
 function Card(props){
-   // const card_img = fetch("https://api.themoviedb.org/3/movie/"+this.props.id+"?api_key=5068de400d8add1ad16e46caceba6ff7&language=en-US")["poster_path"]
+   
     return(
         <div 
          style={
@@ -13,14 +13,15 @@ function Card(props){
                 border:10,
                 borderRadius:10,
                 margin:10,
-                textAlign:'center'}
+                textAlign:'center',
+            }
             }
         >
             <div>
-                <img src={"https://image.tmdb.org/t/p/original/"} width={250} height={420}/>
+                <img src={props.image} width={250} height={420}/>
             </div>
             <a>{props.title+",\n"}</a>
-            <a>{props.genre}</a>
+            
             
             
         </div>

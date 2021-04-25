@@ -9,14 +9,13 @@ class Carousel extends React.Component{
     };
     makeItems = (movies) =>{
         return movies.map((movie) =>{
+            //alert(movie)
+            //console.log(movie["title"])
 
             return(
                 <Card 
-                    id={movie.id}
-                    title={movie.title}
-                    genre={movie.genre}
-                    year={movie.year}
-                    image={"https://image.tmdb.org/t/p/original/"}
+                    title={movie["title"]}
+                    image={movie["url"]}
                 />
             )
         })
@@ -24,7 +23,11 @@ class Carousel extends React.Component{
     render(){
         return(
             <div className="rows">
-                <div className="rows" style={{display:'flex', flexDirection:'row', scrollBehavior:'auto', overflowX:'scroll', }} >
+                <div className="rows" style={{display:'flex', 
+                flexDirection:'row', 
+                scrollBehavior:'auto', 
+                overflowX:'scroll' }} 
+                >
                     {this.makeItems(this.props.movies)}
                 </div>
             </div>
