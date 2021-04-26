@@ -12,6 +12,7 @@ class InputPage extends React.Component{
         this.state={
             show_rec:false,
             movies: "",
+            original:[],
             rec_movies1:
             [
                 {
@@ -72,8 +73,15 @@ class InputPage extends React.Component{
                 pushed_movies += movies_passed[i] 
  //           }
         }
+        
         let url_passed = "/search_movie/"+pushed_movies
         fetch(url_passed).then(res => res.json()).then(data =>{
+            let arrO = []
+            let object1 = JSON.parse(data.original_movie);
+            //alert(object1.title)
+            //"title": "The Avengers"
+            arrO.push(object1)
+            this.setState({original: arrO})
             var new_data1 = data.top_10_posters;
             var new_data2 = data.bottom_10_posters;
             var new_data3 = data.top_10_soundtracks;
@@ -107,7 +115,7 @@ class InputPage extends React.Component{
         })
         setTimeout(function(){
             this.setState({show_rec:'show'})}.bind(this)
-        , 5000)
+        , 10000)
     }
     handleChange(event){ // Here is where the value is being passed in so the API can use it
         this.setState({movies: event.target.value})
@@ -121,7 +129,7 @@ class InputPage extends React.Component{
 
         const renderAuthButton = () =>{
             if(this.state.show_rec === "show"){
-                return <RecPage movies1={this.state.rec_movies1} movies2={this.state.rec_movies2} movies3 ={this.state.rec_movies3} movies4={this.state.rec_movies4} movies5={this.state.rec_movies5}/>
+                return <RecPage original={this.state.original}  movies1={this.state.rec_movies1} movies2={this.state.rec_movies2} movies3 ={this.state.rec_movies3} movies4={this.state.rec_movies4} movies5={this.state.rec_movies5}/>
             }else if(this.state.show_rec === "loading"){
                 return (
                 <div style={{height:'100vh', textAlign:'center',color:'slategray'}}>

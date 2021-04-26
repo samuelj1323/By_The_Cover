@@ -20,7 +20,7 @@ function Card(props){
             <div>
                 <img src={props.image} width={250} height={420}/>
             </div>
-            <a>{props.title+",\n"}</a>
+            <a>{props.title+"\n"}</a>
             
             
             

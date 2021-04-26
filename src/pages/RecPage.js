@@ -28,7 +28,8 @@ class RecPage extends React.Component{
         return(
             <div className="body">
                 
-                
+                <h2 style={{color:"white"}}>We begin with...</h2>
+                <Carousel movies={this.props.original}/>
                 <h2 style={{color:"white"}}>Most Similar to the Poster art...</h2>
                 <Carousel movies={this.props.movies1}/>
                 <h2 style={{color:"white"}}>Least Similar to the Poster art...</h2>
