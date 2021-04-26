@@ -221,8 +221,8 @@ class spotify_api(object):
 
 
 
-id = '981213db74a44914b7b9e753e2bc1eea' #spotify id
-secret = 'b5139c4b81db4d1d9a7c706b999639a9' #spotify secret key
+id = 'id' #spotify id
+secret = 'secret' #spotify secret key
 spotify = spotify_api(id, secret) #making an instance of the class
 
 #create features mat
