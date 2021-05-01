@@ -13,6 +13,7 @@ Download this data to By_The_Cover/api/venv/data
 ## Building the Project - This will require 2 terminals
 
 In the first terminal
+- `npm install`
 - `npm start`
 
 In the second terminal
