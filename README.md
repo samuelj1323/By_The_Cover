@@ -1,6 +1,9 @@
 # By_The_Cover
 The audiovisual recommender for movies that recommends similar movies based on poster and soundtrack.
 
+## The Pitch
+When was the last time you couldn't name a movie you'd like to watch? Probably all the time, however when was the last time you wanted to watch a movie, couldn't name the movie, but knew the general theme you'd like to explore. "Something like Star wars, or Batman" ... Enter By The Cover. This project will exercise similarity scores off of movie posters from the TMDB movie data base and spotify musical albums of the specified films. These similarities produce filters through the database described below.
+
 ## Prepping to build
 
 The data required for this application is taken of the Spotify and TMDB APIs and processed.
