@@ -20,11 +20,6 @@ def hello():
 @app.route('/search_movie/<movie>')
 def show_movie(movie):
     ret = ""
-    #for i in range(len(movie)):
-    #    if movie[i] == "_":
-    #        ret += " "
-    #    else:
-    #        ret += movie[i]
     return analysis.analyze(movie)
     #return ret
 
